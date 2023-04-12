@@ -1,15 +1,12 @@
 package com.ericrochester.todo
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
 
 @Entity
 data class Todo(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long?,
+    val id: Long? = null,
     val title: String,
     val completed: Boolean = false,
-    val order: Int = -1
+    val taskOrder: Int = -1
 )

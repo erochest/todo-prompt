@@ -25,3 +25,12 @@ databaseChangeLog:
                   name: order
                   type: INTEGER
                   defaultValue: -1
+  - changeSet:
+      id: 20230411150000-1
+      author: eric.rochester
+      changes:
+        - renameColumn:
+            tableName: todo
+            oldColumnName: "order"
+            newColumnName: "task_order"
+            columnDataType: int
